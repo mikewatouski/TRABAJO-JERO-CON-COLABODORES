@@ -23,11 +23,17 @@ public class ManagerScript : MonoBehaviour
     private bool verificarAlcanzaJusto;
     private bool verificarNoAlcanza;
 
+     public Button botonJugarOtraVez;
+    public Button botonSalir;
+
+    public GameObject panelNotificaciones;
+
     // Start is called before the first frame update
     void Start()
     {
         DesactivarObjetos();
         RandomizarValores();
+        
     }
 
     public void DesactivarObjetos()
@@ -94,4 +100,12 @@ public class ManagerScript : MonoBehaviour
             Debug.Log("Incorrecto");
         }
     }
+    
+ public void JugarOtraVez()
+    {
+        DesactivarObjetos();
+            RandomizarValores();
+    }
+
+   
 }
